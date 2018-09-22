@@ -1,4 +1,4 @@
-# learn-clang
+# Clone learn-clang
 
 ```
 $ git clone https://github.com/KushibikiMashu/learn-clang.git

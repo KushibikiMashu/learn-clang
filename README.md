@@ -3,14 +3,14 @@
 ```
 $ git clone https://github.com/KushibikiMashu/learn-clang.git
 $ cd learn-clang
-$ docker build -t ubuntu:learn-clang .
+$ docker pull alpine:3.8
+$ docker build -t alpine:learn-c .
 ```
 
-# How to compile and exec c file
-Docker Image: ubuntu:latest
+# How to compile and exec compiled file
 ```
-$ docker run -ti --name learnc -v $(pwd)/../learn-clang:/home ubuntu:learn-clang bash
-[containerID]:/# cd /home
+$ docker run -v "$PWD":/home -ti --rm alpine:learn-c
+[containerID]:/# cd /home/algorithm
 [containerID]:/home/algorithm# gcc binary_search.c
 [containerID]:/home/algorithm# ./a.out
 ```
